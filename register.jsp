@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>筋トレ記録</title>
+</head>
+<body>
+
+<h1>筋トレ記録</h1>
+
+<form action="ExerciseServlet" method="post">
+    <label for="exercise">運動名:</label>
+    <input type="text" id="exercise" name="exercise"><br><br>
+
+    <label for="sets">セット数:</label>
+    <input type="number" id="sets" name="sets" min="1" value="1"><br><br>
+
+    <label for="reps">リップ数:</label>
+    <input type="number" id="reps" name="reps" min="1" value="1"><br><br>
+
+    <label for="weight">重量 (kg):</label>
+    <input type="number" id="weight" name="weight" min="0" step="any"><br><br>
+
+    <input type="submit" value="記録する">
+</form>
+
+</body>
+</html>
+
