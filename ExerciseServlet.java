@@ -6,18 +6,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ExerciseServlet")
-public class ExerciseServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+@WebServlet("/ExerciseServlet") //マッピング名の指定
+public class ExerciseServlet extends HttpServlet {　　//HttpServlet クラスを継承
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {　
+        response.setContentType("text/html;charset=UTF-8");　//コンテンツタイプ指定
+        PrintWriter out = response.getWriter();　　//PrintWriterを取得
 
-        String exercise = request.getParameter("exercise");
-        int sets = Integer.parseInt(request.getParameter("sets"));
-        int reps = Integer.parseInt(request.getParameter("reps"));
-        double weight = Double.parseDouble(request.getParameter("weight"));
+        String exercise = request.getParameter("exercise");　　//エクササイズの名前の入力
+        int sets = Integer.parseInt(request.getParameter("sets"));　　//エクササイズのセット数の入力
+        int reps = Integer.parseInt(request.getParameter("reps"));　　//エクササイズ動作の回数の入力
+        double weight = Double.parseDouble(request.getParameter("weight"));　　//エクササイズに使用した重さの入力
 
-        out.println("<html>");
+        out.println("<html>");　//PrintWriterを取得
         out.println("<head><title>筋トレ記録</title></head>");
         out.println("<body>");
         out.println("<h1>筋トレ記録</h1>");
