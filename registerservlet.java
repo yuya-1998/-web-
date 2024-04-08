@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ExerciseServlet") //マッピング名の指定
+@WebServlet("/registerservlet") //マッピング名の指定
 public class ExerciseServlet extends HttpServlet {　　//HttpServlet クラスを継承
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {　
         response.setContentType("text/html;charset=UTF-8");　//コンテンツタイプ指定
